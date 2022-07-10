@@ -23,3 +23,5 @@ urlpatterns = [
     path('informatica/',informatica,name="informatica"),
     path('noticia/',noticia,name="noticia")
 ]
+
+
