@@ -4,8 +4,3 @@ from django.shortcuts import render
 def index(request):
     return render(request,"index.html")
 
-def informatica(request):
-    return render(request, "informatica.html")
-
-def noticia(request):
-    return render(request, "noticia.html")

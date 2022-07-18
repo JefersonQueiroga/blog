@@ -20,8 +20,6 @@ from postagem.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',index,name="index"),
-    path('informatica/',informatica,name="informatica"),
-    path('noticia/',noticia,name="noticia")
 ]
 
 
