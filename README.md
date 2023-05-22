@@ -14,8 +14,8 @@ Certifique-se de ter o Django instalado em seu ambiente Python antes de executar
 
 Siga as etapas abaixo para baixar e instalar o projeto no Windows:
 
-1. Clone este repositório em sua máquina local usando o comando: `git clone https://github.com/seu-usuario/nome-do-repositorio.git`.
-2. Navegue até o diretório raiz do projeto usando o comando: `cd nome-do-repositorio`.
+1. Clone este repositório em sua máquina local usando o comando: `git clone https://github.com/JefersonQueiroga/blog`.
+2. Navegue até o diretório raiz do projeto usando o comando: `cd blog`.
 3. Crie um ambiente virtual usando o comando: `python -m venv venv`.
 4. Ative o ambiente virtual com o comando: `venv\Scripts\activate`.
 5. Instale as dependências do projeto usando o comando: `pip install -r requirements.txt`.
