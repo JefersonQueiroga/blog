@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes da Postagem</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container-fluid py-5">
+        <div class="row">
+            <div class="col-12">
+                <div class="card mb-4 shadow">
+                    <div class="row no-gutters">
+                        <div class="col-lg-6">
+                            <img class="card-img" src="{{objeto.imagem.url}}" alt="Imagem da Postagem" style="object-fit: cover; height: 100%;">
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card-body">
+                                <h2 class="card-title">{{ objeto.titulo }}</h2>
+                                <p class="card-text">{{ objeto.texto }}</p>
+                                <p class="card-text">
+                                    <small class="text-muted">Postado em {{ objeto.data_criacao }}</small>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

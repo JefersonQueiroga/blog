@@ -30,18 +30,28 @@
     </div>
   </nav>
 
-  <div class="container mt-5">
-    <div class="row justify-content-center">
-      <div class="col-12">
-        <h2>Título da Postagem</h2>
-        <p>Data de Criação: 22 de Maio de 2023</p>
-        <hr>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel tellus ac mi interdum suscipit vitae sed
-          est. Nunc sed nisi pretium, posuere nisi non, dictum libero. Suspendisse cursus velit nec felis sagittis, ac
-          efficitur nisl consectetur. Proin nec finibus nisl, in congue enim. Nullam eu lacinia risus. Sed ac finibus
-          est. Etiam interdum nisi ut cursus tempor. Donec sollicitudin tortor sit amet eros tempus, a dapibus orci
-          ullamcorper.</p>
-      </div>
+  <div class="container-fluid mt-5">
+      {% for objeto in lista_postagens %}  
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+              <div class="card mb-4 shadow-sm">
+                <img class="bd-placeholder-img card-img-top" src="{{  objeto.imagem.url  }}" alt="Imagem do post">
+                <div class="card-body">
+                  <h5 class="card-title">Título do Post</h5>
+                  <p class="card-text">{{ objeto.texto | truncatechars:100 }}</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                      <small class="text-muted">Data da Postagem</small>
+                    </div>
+                    <div>
+                      <a href="{% url 'detalhe-postagem' objeto.id %}" class="btn btn-sm btn-outline-secondary">Ver Detalhes</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      {%endfor%}  
     </div>
   </div>
 
