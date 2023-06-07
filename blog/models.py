@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils.html import mark_safe
 
 
 
@@ -15,4 +16,4 @@ class Postagem(models.Model):
 
     def __str__(self):
         return self.titulo
-
+    

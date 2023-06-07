@@ -3,10 +3,10 @@ from django.http import HttpResponse
 from .models import Categoria,Postagem
 from django.shortcuts import get_object_or_404
 
-def detalhe_postagem(request,id):
-    postagem = get_object_or_404(Postagem, id=id)
+def detalhe_postagem(request,id_postagem):
+    postagem = get_object_or_404(Postagem, id=id_postagem)
     context={
-        'objeto' : postagem
+        'objeto' : postagem,
     }
     return render(request,'blog/detalhe.html',context)
 
@@ -34,3 +34,6 @@ def lista_postagem(request):
         'lista_postagens' : postagens 
     } 
     return render(request,'blog/postagem.html',context)
+
+def pagina(request):
+    return render(request,'blog/page1.html')

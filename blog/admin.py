@@ -4,7 +4,7 @@ from .models import Postagem,Categoria
 
 @admin.register(Postagem)
 class PostagemAdmin(admin.ModelAdmin):
-    list_display=('titulo','texto','data_criacao')
+    list_display=('titulo','texto','data_criacao','imagem')
 
 
 @admin.register(Categoria)
