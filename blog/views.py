@@ -37,3 +37,6 @@ def lista_postagem(request):
 
 def pagina(request):
     return render(request,'blog/page1.html')
+
+def vespertino(request):
+    return render(request,'blog/vespertino.html')

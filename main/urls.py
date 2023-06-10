@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from blog.views import index,lista_categoria,lista_postagem,detalhe_postagem,pagina
+from blog.views import index,lista_categoria,lista_postagem,detalhe_postagem,pagina,vespertino
 from django.conf.urls.static import static
 from django.conf import settings
 
@@ -26,6 +26,7 @@ urlpatterns = [
     path('categoria/',lista_categoria,name='lista-categoria'),
     path('postagem/',lista_postagem,name='lista-postagem'),
     path('postagem/<int:id_postagem>',detalhe_postagem,name='detalhe-postagem'),
-    path('page1/',pagina,name='pagina')  
+    path('page1/',pagina,name='pagina'),
+    path('vespertino/',vespertino,name='vespertino')  
   
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
